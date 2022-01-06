@@ -1,5 +1,5 @@
-import { taskReducer } from './src/reducers/reducer.js'
-import{ newTask, removeTask, strokeTask, updateTask } from './src/actions/actions.js'
+import { taskReducer } from '/todo-list/src/reducers/reducer.js'
+import{ newTask, removeTask, strokeTask, updateTask } from '/todo-list/src/actions/actions.js'
 
 let data= document.querySelector('.tasks__data')
 let addBtn= document.querySelector('.add')
