@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/index.css">
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js"></script>
+    <title>Todo List</title>
+</head>
+<body>
+  <main> 
+    <header>
+      <h2>ToDo List</h2>
+    </header> 
+    <section class="container__form">
+      <form>
+        <input type="text" class="input-task" placeholder="Write task">
+        <button class="add">Add task</button>
+      </form>
+    </section>
+    <section class="container__tasks">
+      <h3 class="tasks__title hidden">Tasks</h3>
+      <div class="tasks__data"></div>
+    </section>
+    <section class="container__modal hidden">
+      <div class="modal">    
+        <div class="modal__close">X</div>
+        <h3>Edit</h3>
+        <div class="modal__form-update">
+          <input type="text" class="form-update__input" placeholder = "Write task content">
+          <div class="form-update__button form-update__button-cancel">Cancel</div>
+          <div class="form-update__button form-update__button-update">Update</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+  <script src="src/index.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial';
+}
+
+body{
+  width:100%;
+  background:rgb(246, 246, 246);
+}
+
+main,
+footer{
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+section{
+  width:100%;
+}
+
+main{
+  min-height: calc(100vh - 4rem);
+}
+
+footer{
+  height: 4rem;
+  justify-content: center;
+}
+
+
+h2{
+  margin-top: 3rem;
+}
+
+.container__tasks{
+  display:grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  max-width:800px;
+  gap: 1rem;
+  padding: 1rem;
+  justify-items: center;
+  box-sizing: border-box;
+}
+
+.tasks__data{
+  display:grid;
+  grid-template-columns: 1fr;
+  width: 80%;
+  align-content: center;
+  justify-items: center;
+  padding: 1rem;
+  background:rgb(255, 255, 255);
+  border-radius: .5rem;
+  box-shadow: 1px 1px 10px 1px rgb(204, 204, 204);
+}
+
+.task{
+  display:grid;
+  grid-template-columns: 2rem 1fr 5rem;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+  height:100%;
+  padding: .5rem 0;
+  background: #fff;
+  border-bottom: 1px solid gray;
+}
+
+.container__form{
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container__form form{
+  display: flex;
+}
+
+.checked{
+  width: 1.5rem;
+  height:1.5rem;
+  display:flex;
+  justify-self: center;
+}
+
+.input-task{
+  outline:none;
+  border: 1px solid gray;
+  border-top-left-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  padding:.3rem 1rem;
+  height: 2rem;
+  box-sizing: border-box;
+}
+
+button{
+  height: 2rem;
+  box-sizing: border-box;
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  padding:.3rem 1rem;
+  border:none;
+  cursor:pointer;
+}
+
+.add{
+  background: black;
+  color:rgb(255, 255, 255);
+}
+
+.container__buttons{
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.delete,
+.update{
+  height: 2rem;
+  width: 2rem;
+  box-sizing: border-box;
+  border-radius: .5rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border:none;
+  cursor:pointer;
+  justify-self: center;
+}
+
+.delete{
+  background: rgb(230, 70, 118);
+  color: #fff;
+}
+
+.update{
+  background: rgb(0, 199, 76);
+  color: #fff;
+}
+
+.strike{
+  text-decoration: line-through;
+}
+
+.container__modal{
+  width: 100%;
+  height: 100vh;
+  display:flex;
+  position: fixed;
+  top:0;
+  left:0;
+  background: rgba(0, 0, 0, 0.452);
+  z-index:3;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal{
+  background: #fff;
+  width: 400px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.modal__close{
+  position: absolute;
+  z-index: 4;
+  top:10px;
+  right: 10px;
+  width: 3rem;
+  height:3rem;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  cursor: pointer;
+  color: #fff;
+}
+
+.modal__form-update{
+  width: 80%;
+  background: #fff;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.form-update__input{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 100%;
+  display:flex;
+  justify-self: center;
+  padding: .5rem 1rem;
+  outline: none;
+}
+
+.form-update__button{
+  width: fit-content;
+  height: 2rem;
+  padding: .5rem 1rem;
+  cursor: pointer;
+}
+
+.form-update__button-update{
+  background: rgb(57, 139, 177);
+  color: #fff;
+  justify-self: left;
+  display:flex;
+}
+
+.form-update__button-cancel{
+  background: rgb(204, 30, 82);
+  color: #fff;
+  justify-self: right;
+  display:flex;
+}
+
+.hidden{
+  display:none;
+}
+
+
+@media screen and (max-width: 550px){
+  .tasks__data,
+  .modal__form-update{
+    width: 100%;
+  }
+
+  .form-update__input{
+    width: 100%;
+  }
+
+  .modal{
+    width: 95%;
+    padding: 1rem;
+  }
+}
